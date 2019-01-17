@@ -12,6 +12,9 @@ namespace EfSamurai.Domain
         public bool Brutal { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public BattleLog BattleLog { get; set; }
+        public List<SamuraiBattle> Battles { get; set; }
+
 
 
     }

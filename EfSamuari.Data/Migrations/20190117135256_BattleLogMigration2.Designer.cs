@@ -4,14 +4,16 @@ using EfSamurai.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EfSamurai.Data.Migrations
 {
     [DbContext(typeof(SamuraiContext))]
-    partial class SamuraiContextModelSnapshot : ModelSnapshot
+    [Migration("20190117135256_BattleLogMigration2")]
+    partial class BattleLogMigration2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -110,19 +112,6 @@ namespace EfSamurai.Data.Migrations
                     b.ToTable("Samurais");
                 });
 
-            modelBuilder.Entity("EfSamurai.Domain.SamuraiBattle", b =>
-                {
-                    b.Property<int>("BattleId");
-
-                    b.Property<int>("SamuraiId");
-
-                    b.HasKey("BattleId", "SamuraiId");
-
-                    b.HasIndex("SamuraiId");
-
-                    b.ToTable("SamuraiBattle");
-                });
-
             modelBuilder.Entity("EfSamurai.Domain.SecretIdentity", b =>
                 {
                     b.Property<int>("Id")
@@ -161,19 +150,6 @@ namespace EfSamurai.Data.Migrations
                     b.HasOne("EfSamurai.Domain.Hairstyle", "Hair")
                         .WithMany()
                         .HasForeignKey("HairId");
-                });
-
-            modelBuilder.Entity("EfSamurai.Domain.SamuraiBattle", b =>
-                {
-                    b.HasOne("EfSamurai.Domain.Battle", "Battle")
-                        .WithMany("Battles")
-                        .HasForeignKey("BattleId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("EfSamurai.Domain.Samurai", "Samurai")
-                        .WithMany("Battles")
-                        .HasForeignKey("SamuraiId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("EfSamurai.Domain.SecretIdentity", b =>
