@@ -6,5 +6,6 @@ namespace EfSamurai.Data
 {
     class SamuraiContext
     {
+        public DbSet<EfSa> MyProperty { get; set; }
     }
 }

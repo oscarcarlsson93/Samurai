@@ -6,5 +6,7 @@ namespace EfSamurai.Domain
 {
     class Samurai
     {
+        public int Id { get; set; }
+
     }
 }

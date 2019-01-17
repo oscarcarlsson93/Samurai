@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfSamuari.Data", "EfSamuari.Data\EfSamuari.Data.csproj", "{669AEACE-09D7-4E0F-A7C9-87CBEAAEADF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfSamurai.Data", "EfSamuari.Data\EfSamurai.Data.csproj", "{669AEACE-09D7-4E0F-A7C9-87CBEAAEADF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfSamuari.Domain", "EfSamuari.Domain\EfSamuari.Domain.csproj", "{6A3F5760-0C1C-45F1-BE6D-0AA339C19347}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfSamurai.Domain", "EfSamuari.Domain\EfSamurai.Domain.csproj", "{6A3F5760-0C1C-45F1-BE6D-0AA339C19347}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
