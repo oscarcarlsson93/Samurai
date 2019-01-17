@@ -10,6 +10,8 @@ namespace EfSamurai.Domain
         public string Name { get; set; }
         public string FamilyName { get; set; }
         public List<Quote> SamuraiQuotes { get; set; }
+        public Hairstyle Hair { get; set; }
+        public SecretIdentity Secret { get; set; }
 
 
 
