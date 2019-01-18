@@ -10,5 +10,7 @@ namespace EfSamurai.Domain
         public int Name { get; set; }
         public List<BattleEvent> BattleEvents { get; set; }
 
+        public Battle Battle { get; set; }
+
     }
 }

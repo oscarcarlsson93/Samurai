@@ -4,14 +4,16 @@ using EfSamurai.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EfSamurai.Data.Migrations
 {
     [DbContext(typeof(SamuraiContext))]
-    partial class SamuraiContextModelSnapshot : ModelSnapshot
+    [Migration("20190117150649_Battlelog2Migration")]
+    partial class Battlelog2Migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,8 +41,7 @@ namespace EfSamurai.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BattleLogId")
-                        .IsUnique();
+                    b.HasIndex("BattleLogId");
 
                     b.ToTable("Battles");
                 });
@@ -166,8 +167,8 @@ namespace EfSamurai.Data.Migrations
             modelBuilder.Entity("EfSamurai.Domain.Battle", b =>
                 {
                     b.HasOne("EfSamurai.Domain.BattleLog", "BattleLog")
-                        .WithOne("Battle")
-                        .HasForeignKey("EfSamurai.Domain.Battle", "BattleLogId")
+                        .WithMany()
+                        .HasForeignKey("BattleLogId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

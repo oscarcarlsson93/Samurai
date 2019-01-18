@@ -10,6 +10,7 @@ namespace EfSamurai.Domain
         public string Description { get; set; }
         public string Summary { get; set; }
         public DateTime Order { get; set; }
+        public BattleLog BattleLog { get; set; }
 
     }
 }
